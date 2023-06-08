@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+div.analog-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60vmin;
+  height: 60vmin;
+  border: 2vmin solid rgba(45, 45, 45, 0.5019607843);
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 0px rgba(45, 45, 45, 0.25), inset 0px 0px 8px 0px rgba(45, 45, 45, 0.25);
+  background-color: transparent;
+  font-family: monospace;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: bold;
+}
+div.analog-clock::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+div.analog-clock > div.points {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+div.analog-clock > div.points > div.point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  color: #2d2d2d;
+  font-size: 3vmin;
+}
+div.analog-clock > div.points > div.point-1 {
+  top: 6.69%;
+  left: 75%;
+}
+div.analog-clock > div.points > div.point-2 {
+  top: 25%;
+  left: 93.31%;
+}
+div.analog-clock > div.points > div.point-3 {
+  top: 50%;
+  left: 100%;
+}
+div.analog-clock > div.points > div.point-4 {
+  top: 75%;
+  left: 93.31%;
+}
+div.analog-clock > div.points > div.point-5 {
+  top: 93.31%;
+  left: 75%;
+}
+div.analog-clock > div.points > div.point-6 {
+  top: 100%;
+  left: 50%;
+}
+div.analog-clock > div.points > div.point-7 {
+  top: 93.31%;
+  left: 25%;
+}
+div.analog-clock > div.points > div.point-8 {
+  top: 75%;
+  left: 6.69%;
+}
+div.analog-clock > div.points > div.point-9 {
+  top: 50%;
+  left: 0%;
+}
+div.analog-clock > div.points > div.point-10 {
+  top: 25%;
+  left: 6.69%;
+}
+div.analog-clock > div.points > div.point-11 {
+  top: 6.69%;
+  left: 25%;
+}
+div.analog-clock > div.points > div.point-12 {
+  top: 0%;
+  left: 50%;
+}
+div.analog-clock > div.pointers {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+}
+div.analog-clock > div.pointers > div.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 1.5vmin;
+  height: 1.5vmin;
+  border-radius: 50%;
+  background-color: #2d2d2d;
+}
+div.analog-clock > div.pointers > div.pointer::before, div.analog-clock > div.pointers > div.pointer::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  transform: translate(-50%, 0%);
+  border-radius: 0.75vmin;
+  background-color: inherit;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-hour {
+  z-index: 1;
+  background-color: #2d2d2d;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-hour::before {
+  width: 60%;
+  height: 700%;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-minute {
+  z-index: 2;
+  background-color: #2d2d2d;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-minute::before {
+  width: 40%;
+  height: 1000%;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-second {
+  z-index: 2;
+  background-color: #088;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-second::before {
+  width: 20%;
+  height: 1400%;
+}
+div.analog-clock > div.pointers > div.pointer.pointer-second::after {
+  top: 10%;
+  width: 40%;
+  height: 300%;
+}
+
+/*# sourceMappingURL=style.css.map */
